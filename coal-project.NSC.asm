@@ -5,7 +5,7 @@
 .data
     w1  db '  ==========================================', 13, 10, '$'
     w2  db '  =     NUMBER  SYSTEM  CONVERTER         =', 13, 10, '$'
-    w3  db '  =   Jozza  |  Zarnaina  |  Adeena      =', 13, 10, '$'
+    w3  db '  =   group members name     =', 13, 10, '$'
     w4  db '  =     COAL Project  -  Spring 2026      =', 13, 10, '$'
     w5  db '  ==========================================', 13, 10, '$'
     m0  db 13, 10, '$'
