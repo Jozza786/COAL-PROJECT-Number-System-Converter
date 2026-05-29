@@ -1,6 +1,3 @@
-; NUMBER SYSTEM CONVERTER - 8086 Assembly Language
-; Members : Jozza | Zarnaina | Adeena
-; Tool    : EMU8086 | Spring 2026
 
 .model small
 .stack 100h
@@ -59,14 +56,14 @@ wait_key PROC
     ret
 wait_key ENDP
 
-; FAST print - uses DOS INT 21h AH=9 (no color, instant)
+
 print_fast PROC
     mov  ah, 9
     int  21h
     ret
 print_fast ENDP
 
-; COLORED print - char by char via BIOS (used for results only)
+
 print_str_col PROC
     push si
     push ax
@@ -101,7 +98,7 @@ psc_done:
     ret
 print_str_col ENDP
 
-; prints ONE char in AL with color in BL (used for result digits only)
+
 print_char_col PROC
     push bx
     push cx
@@ -116,7 +113,7 @@ print_char_col PROC
     ret
 print_char_col ENDP
 
-; welcome uses FAST print - instant display
+
 show_welcome PROC
     call clear_screen
     call print_newline
@@ -133,7 +130,7 @@ show_welcome PROC
     ret
 show_welcome ENDP
 
-; menu uses FAST print - instant display
+
 show_menu PROC
     call print_newline
     lea  dx, m1
@@ -157,7 +154,7 @@ show_menu PROC
     ret
 show_menu ENDP
 
-; prompts use FAST print
+
 read_decimal PROC
     lea  dx, inp_dec
     call print_fast
@@ -185,7 +182,6 @@ rd_done:
     ret
 read_decimal ENDP
 
-; result label fast, result digits YELLOW colored
 dec_to_binary PROC
     lea  dx, rb
     call print_fast
